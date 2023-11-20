@@ -5,3 +5,7 @@ and it looks like this in Desktop :
 
 
 ![run-time-desktop](https://github.com/Mahdi-Khorshidi-26/BitcoinNews-website/assets/150541211/67d8480d-699e-445a-851a-e3e294e0bf06)
+
+and in a tablet : 
+
+![run-time-tablet](https://github.com/Mahdi-Khorshidi-26/BitcoinNews-website/assets/150541211/d024f68b-95ff-4564-b926-4c27eaa7fa58)
