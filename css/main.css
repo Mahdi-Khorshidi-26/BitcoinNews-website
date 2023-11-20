@@ -74,6 +74,10 @@ img {
   font-family: "roboto-bold";
 }
 
+.nav-mobile {
+  display: none;
+}
+
 .container {
   display: grid;
   grid-template-columns: 3fr 5fr;
@@ -452,4 +456,147 @@ img {
 }
 .footer .footer-container .footer-menu-icon a:not(:first-child) {
   margin: 15px;
+}
+
+@media (max-width: 780px) {
+  .nav .container {
+    grid-template-columns: 2fr 5fr;
+  }
+  .nav .container .logo {
+    font-size: 45px;
+  }
+  .nav .container .list-menu li {
+    font-size: 14px;
+  }
+  .main .container {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "item1 item1 item1" "item1 item1 item1" "item3 item3 item3" "item3 item3 item3" "item2 item2 item2" "item4 item4 item5" "item4 item4 item5";
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .main .container .resent-news {
+    grid-area: item1;
+  }
+  .main .container .btc-price-list {
+    grid-area: item2;
+  }
+  .main .container .popular-posts {
+    grid-area: item3;
+    display: grid;
+    grid-template-rows: 40px 2fr;
+    grid-template-areas: "title title" "post  post";
+    height: 250px;
+  }
+  .main .container .popular-posts .title-container {
+    grid-area: title;
+  }
+  .main .container .popular-posts .popular-posts-content {
+    grid-area: post;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "post1 post2" "post3 post4";
+    align-items: start;
+    grid-gap: 10px;
+  }
+  .main .container .popular-posts .popular-posts-content img {
+    width: 100%;
+    height: 100px;
+  }
+  .main .container .popular-posts .popular-posts-content .item1 {
+    grid-area: post1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4px;
+    align-items: start;
+  }
+  .main .container .popular-posts .popular-posts-content .item2 {
+    grid-area: post2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4px;
+    align-items: start;
+  }
+  .main .container .popular-posts .popular-posts-content .item3 {
+    grid-area: post3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4px;
+    align-items: start;
+  }
+  .main .container .popular-posts .popular-posts-content .item4 {
+    grid-area: post4;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4px;
+    align-items: start;
+  }
+  .main .container .popular-posts .popular-posts-content .content-container-writer-detail {
+    font-size: 10px;
+  }
+  .main .container .popular-posts .popular-posts-content .content-container-title {
+    font-size: 12px;
+  }
+  .main .container .crypto-mining-news {
+    grid-area: item4;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "title title" "crypto-post1 crypto-post2";
+    grid-gap: 15px;
+  }
+  .main .container .crypto-mining-news img {
+    height: 82%;
+  }
+  .main .container .crypto-mining-news .title-container {
+    grid-area: title;
+  }
+  .main .container .crypto-mining-news .crypto-news1 {
+    grid-area: crypto-post1;
+  }
+  .main .container .crypto-mining-news .crypto-news1 .content-container .content-container-title {
+    font-size: 16px;
+  }
+  .main .container .crypto-mining-news .crypto-news1 .content-container-writer-detail {
+    font-size: 10px;
+  }
+  .main .container .crypto-mining-news .crypto-news2 {
+    grid-area: crypto-post2;
+  }
+  .main .container .crypto-mining-news .crypto-news2 .content-container .content-container-title {
+    font-size: 16px;
+  }
+  .main .container .crypto-mining-news .crypto-news2 .content-container-writer-detail {
+    font-size: 10px;
+  }
+  .main .container .news-letter {
+    position: relative;
+    grid-area: item5;
+  }
+  .main .container .news-letter .news-letter-text {
+    font-size: 20px;
+    padding: 10px;
+  }
+  .footer .container {
+    font-size: 15px;
+  }
+  .footer .container .footer-item1 .two .name {
+    display: block;
+  }
+  .footer .footer-container .footer-menu-icon {
+    grid-column: span 1;
+    margin-top: 20px;
+  }
+  .footer .footer-container .footer-menu-icon a {
+    cursor: pointer;
+    color: #666;
+    transition: 0.4s;
+  }
+  .footer .footer-container .footer-menu-icon a:hover {
+    transition: 0.2s;
+    color: rgb(255, 217, 0);
+  }
+  .footer .footer-container .footer-menu-icon a:not(:first-child) {
+    margin: 10px;
+  }
 }/*# sourceMappingURL=main.css.map */
