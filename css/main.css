@@ -1,0 +1,402 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "roboto-normal";
+  src: url("../assets/fonts/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "roboto-bold";
+  src: url("../assets/fonts/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: "roboto-bold-italic";
+  src: url("../assets/fonts/Roboto-MediumItalic.ttf");
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgba(209, 209, 209, 0.4);
+  font-family: "roboto-normal";
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+a:hover {
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+img {
+  display: block;
+  width: 100%;
+  box-shadow: 0px 0px 5px black;
+}
+
+.text-black {
+  color: #333;
+}
+
+.text-white {
+  color: #f5f5f5;
+}
+
+.text-golden {
+  color: rgb(255, 217, 0);
+}
+
+.text-darken {
+  color: black;
+}
+
+.bold {
+  font-family: "roboto-bold";
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+}
+.container .logo {
+  font-family: "roboto-bold";
+  font-size: 30px;
+  padding: 10px;
+}
+.container .list-menu {
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container .list-menu li a {
+  font-family: "roboto-bold";
+  color: #333;
+  border-bottom: 2px solid transparent;
+}
+.container .list-menu li a:hover {
+  border-bottom: 2px solid gray;
+}
+
+.header .news .news-title, .header .news .news-title-main {
+  font-family: "roboto-bold";
+  font-size: 12px;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.font-style {
+  font-family: "roboto-normal";
+  text-transform: capitalize;
+  font-variant: normal;
+}
+
+.ml-5 {
+  margin-left: 20px;
+}
+
+.header img {
+  height: 100%;
+}
+.header .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 7px;
+  position: relative;
+}
+.header .news {
+  position: relative;
+  color: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.658);
+  transition: 0.1s;
+  cursor: pointer;
+  overflow: hidden;
+}
+.header .news .news-title-main {
+  position: absolute;
+  top: 100%;
+  left: 20%;
+  transform: translate(-20%, -140%);
+}
+.header .news .news-title-main .title {
+  margin-bottom: 5px;
+  text-transform: capitalize;
+  font-variant: normal;
+}
+.header .news .news-title {
+  position: absolute;
+  top: 100%;
+  left: 20%;
+  transform: translate(-20%, -100%);
+}
+.header .news .news-title .title {
+  margin-bottom: 5px;
+  text-transform: capitalize;
+  font-variant: normal;
+}
+.header .news .img {
+  width: 100%;
+  height: 100%;
+}
+.header .news .img::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(51, 51, 51, 0.2);
+}
+.header .news:hover {
+  transition: 0.3s;
+  transform: skewY(0.5deg);
+}
+.header .news-img1 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.title-container .title {
+  text-transform: uppercase;
+  font-size: 17px;
+  color: #333;
+  font-family: "roboto-bold";
+}
+.title-container .yellow-line {
+  width: 100%;
+  height: 2px;
+  background-color: #cfcfcf;
+  margin-bottom: 10px;
+  margin-top: 8px;
+  position: relative;
+}
+.title-container .yellow-line::before {
+  content: "";
+  position: absolute;
+  background-color: gold;
+  width: 15%;
+  height: 3px;
+  left: 0;
+  top: -60%;
+}
+
+.content-container .content-container-title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #333;
+  font-family: "roboto-bold";
+}
+.content-container .content-container-writer-detail {
+  font-size: 11px;
+  color: #333;
+}
+.content-container .content-container-writer-description {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.btc-price-list ul {
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+.btc-price-list ul li {
+  width: 100%;
+  text-align: center;
+  background-color: gold;
+  font-family: "roboto-bold";
+  color: #333;
+  border-bottom: 1px solid white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 4px;
+}
+
+.main .container {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "item1 item1 item1 item2" "item1 item1 item1 item2" "item1 item1 item1 item3" "item1 item1 item1 item3" "item1 item1 item1 item3" "item1 item1 item1 item3" "item4 item4 item4 item3" "item4 item4 item4 item5";
+  cursor: pointer;
+  transition: 0.5s;
+}
+.main .container .resent-news {
+  grid-area: item1;
+}
+.main .container .btc-price-list {
+  grid-area: item2;
+}
+.main .container .popular-posts {
+  grid-area: item3;
+  display: grid;
+  grid-template-rows: 1fr 10fr;
+  grid-template-areas: "title title" "post  post";
+}
+.main .container .popular-posts .title-container {
+  grid-area: title;
+}
+.main .container .popular-posts .popular-posts-content {
+  grid-area: post;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas: "post1" "post2" "post3" "post4";
+  align-items: start;
+  grid-gap: 1px;
+}
+.main .container .popular-posts .popular-posts-content .item1 {
+  grid-area: post1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4px;
+  align-items: start;
+}
+.main .container .popular-posts .popular-posts-content .item2 {
+  grid-area: post2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4px;
+  align-items: start;
+}
+.main .container .popular-posts .popular-posts-content .item3 {
+  grid-area: post3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4px;
+  align-items: start;
+}
+.main .container .popular-posts .popular-posts-content .item4 {
+  grid-area: post4;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4px;
+  align-items: start;
+}
+.main .container .popular-posts .popular-posts-content .content-container-writer-detail {
+  font-size: 10px;
+}
+.main .container .popular-posts .popular-posts-content .content-container-title {
+  font-size: 12px;
+}
+.main .container .crypto-mining-news {
+  grid-area: item4;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "title title" "crypto-post1 crypto-post2";
+  grid-gap: 10px;
+}
+.main .container .crypto-mining-news img {
+  height: 100%;
+}
+.main .container .crypto-mining-news .title-container {
+  grid-area: title;
+}
+.main .container .crypto-mining-news .crypto-news1 {
+  grid-area: crypto-post1;
+}
+.main .container .crypto-mining-news .crypto-news2 {
+  grid-area: crypto-post2;
+}
+.main .container .news-letter {
+  position: relative;
+  grid-area: item5;
+}
+
+.news-letter-text {
+  font-size: 15px;
+  line-height: 1.2em;
+  margin: 10px;
+  width: 100%;
+}
+
+.email-input {
+  width: 90%;
+  margin: 10px;
+  outline: none;
+  border: 1px solid gold;
+  border-radius: 2px;
+  padding: 10px;
+  font-family: "roboto-normal";
+  position: relative;
+}
+.email-input:focus {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  background-color: gold;
+  width: 35px;
+  height: 36px;
+  left: 88%;
+  top: 84%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.footer {
+  margin-top: 60px;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/images/site-photos/world-map-footer-bg.jpg") no-repeat top center/cover;
+  position: relative;
+}
+.footer::after {
+  content: "";
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+.footer .container {
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-gap: 20px;
+  color: #f5f5f5;
+}
+.footer .container .footer-item {
+  text-transform: capitalize;
+  font-family: "roboto-bold";
+}
+.footer .container .footer-item .logo-footer {
+  font-size: 40px;
+}
+.footer .container .footer-item .logo-footer-item {
+  margin-top: 15px;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+.footer .container .footer-item .one {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.footer .container .footer-item .two {
+  margin-top: 30px;
+}/*# sourceMappingURL=main.css.map */

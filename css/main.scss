@@ -1,0 +1,54 @@
+// variable and reset and global
+@import "variables";
+@import "reset&global";
+
+// navigation menu
+@import "nav";
+
+//header
+@import "header";
+
+//main
+@import "main-section";
+
+//footer
+.footer {
+  margin-top: 60px;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)) , url('../assets/images/site-photos/world-map-footer-bg.jpg') no-repeat top center /cover;
+  position: relative;
+  &::after {
+    content: "";
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    position: absolute;
+  }
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    grid-gap: 20px;
+    color: $text-white;
+    .footer-item{
+        text-transform: capitalize;
+        font-family: $font-name-bold;
+        .logo-footer{
+            font-size: 40px;
+        }
+        .logo-footer-item{
+            margin-top: 15px;
+            margin-bottom: 50px;
+            font-size: 20px;
+        }
+        .one{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }   
+        .two{
+            margin-top: 30px;
+        }
+    }
+  }
+}

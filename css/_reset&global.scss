@@ -1,0 +1,66 @@
+@import "variables";
+// reset and global
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: $font-name-normal;
+  src: url("../assets/fonts/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: $font-name-bold;
+  src: url("../assets/fonts/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: $font-name-bold-italic;
+  src: url("../assets/fonts/Roboto-MediumItalic.ttf");
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: $bg-dark;
+  font-family: $font-name-normal;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.5s;
+  &:hover {
+    opacity: 0.8;
+    transition: 0.5s;
+  }
+}
+ul,
+li {
+  list-style: none;
+}
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 10px;
+}
+img {
+  display: block;
+  width: 100%;
+  box-shadow: 0px 0px 5px black;
+}
+.text-black {
+  color: $text-black;
+}
+.text-white {
+  color: $text-white;
+}
+.text-golden {
+  color: $bg-golden;
+}
+.text-darken {
+  color: black;
+}
+.bold {
+  font-family: $font-name-bold;
+}
