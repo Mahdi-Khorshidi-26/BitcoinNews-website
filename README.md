@@ -8,3 +8,6 @@ and it looks like this in Desktop :
 
 and in a tablet : 
 
+![run-time-tablet](https://github.com/Mahdi-Khorshidi-26/BitcoinNews-website/assets/150541211/836e4358-34b5-4308-8788-2d5f9440881f)
+
+
