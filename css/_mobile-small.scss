@@ -1,0 +1,20 @@
+//mobile small
+@media (max-width: 380px) {
+  //footer
+  .footer {
+    .footer-container {
+      .footer-menu-text {
+        grid-column: 1/-1;
+
+        ul {
+          li {
+            a {
+              font-size: 10px;
+              font-weight: bolder;
+            }
+          }
+        }
+      }
+    }
+  }
+}

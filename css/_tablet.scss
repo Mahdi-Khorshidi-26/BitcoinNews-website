@@ -1,0 +1,163 @@
+//tablet
+@media (max-width: 780px) {
+  // navigation menu styles in tablet
+  .nav {
+    .container {
+      grid-template-columns: 2fr 5fr;
+      .logo {
+        font-size: 45px;
+      }
+      .list-menu {
+        li {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  //header looks good enough
+  //main styles in tablet
+  .main {
+    .container {
+      display: grid;
+      grid-gap: 15px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "item1 item1 item1"
+        "item1 item1 item1"
+        "item3 item3 item3"
+        "item3 item3 item3"
+        "item2 item2 item2"
+        "item4 item4 item5"
+        "item4 item4 item5";
+      cursor: pointer;
+      transition: 0.5s;
+      .resent-news {
+        grid-area: item1;
+      }
+      .btc-price-list {
+        grid-area: item2;
+      }
+      .popular-posts {
+        grid-area: item3;
+        display: grid;
+        grid-template-rows: 40px 2fr;
+        grid-template-areas:
+          "title title"
+          "post  post";
+        height: 250px;
+        .title-container {
+          grid-area: title;
+        }
+        .popular-posts-content {
+          grid-area: post;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-areas:
+            "post1 post2"
+            "post3 post4";
+          align-items: start;
+          grid-gap: 10px;
+          img {
+            width: 100%;
+            height: 100px;
+          }
+          .item1 {
+            @include style-popular(post1);
+          }
+          .item2 {
+            @include style-popular(post2);
+          }
+          .item3 {
+            @include style-popular(post3);
+          }
+          .item4 {
+            @include style-popular(post4);
+          }
+          .content-container-writer-detail {
+            font-size: 10px;
+          }
+          .content-container-title {
+            font-size: 12px;
+          }
+        }
+      }
+      .crypto-mining-news {
+        img {
+          height: 82%;
+        }
+        grid-area: item4;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+          "title title"
+          "crypto-post1 crypto-post2";
+        grid-gap: 15px;
+        .title-container {
+          grid-area: title;
+        }
+        .crypto-news1 {
+          grid-area: crypto-post1;
+          .content-container {
+            .content-container-title {
+              font-size: 16px;
+            }
+          }
+          .content-container-writer-detail {
+            font-size: 10px;
+          }
+        }
+        .crypto-news2 {
+          grid-area: crypto-post2;
+          .content-container {
+            .content-container-title {
+              font-size: 16px;
+            }
+          }
+          .content-container-writer-detail {
+            font-size: 10px;
+          }
+        }
+      }
+      .news-letter {
+        position: relative;
+        grid-area: item5;
+        .news-letter-text {
+          font-size: 20px;
+          padding: 10px;
+        }
+      }
+    }
+  }
+
+  //footer icons
+  .footer {
+    .container {
+      font-size: 15px;
+      .footer-item1 {
+        .two {
+          .name {
+            display: block;
+          }
+        }
+      }
+    }
+    .footer-container {
+      .footer-menu-icon {
+        grid-column: span 1;
+        margin-top: 20px;
+        a {
+          cursor: pointer;
+          color: #666;
+          transition: 0.4s;
+          &:hover {
+            transition: 0.2s;
+            color: $bg-golden;
+          }
+        }
+        a:not(:first-child) {
+          margin: 10px;
+        }
+      }
+    }
+  }
+}

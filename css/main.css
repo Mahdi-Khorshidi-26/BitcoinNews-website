@@ -599,4 +599,163 @@ img {
   .footer .footer-container .footer-menu-icon a:not(:first-child) {
     margin: 10px;
   }
+}
+@media (max-width: 430px) {
+  .nav {
+    display: none;
+  }
+  .nav-mobile {
+    display: block;
+  }
+  .nav-mobile .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+  }
+  .nav-mobile .container .logo {
+    grid-column: span 1;
+  }
+  .nav-mobile .container .bar-icon {
+    grid-column: span 1;
+    justify-self: end;
+    align-self: center;
+    margin-right: 20px;
+    font-size: 35px;
+    color: #333;
+    transition: 1s;
+  }
+  .header .container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .header .container .news {
+    grid-column: 1/-1;
+  }
+  .main .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "resent" "popular" "btc" "crypto" "news";
+    grid-gap: 10px;
+  }
+  .main .container .item {
+    grid-column: 1/-1;
+  }
+  .main .container .resent-news {
+    height: 320px;
+    grid-area: resent;
+  }
+  .main .container .crypto-mining-news {
+    grid-area: crypto;
+  }
+  .main .container .crypto-mining-news .news .content-container .content-container-title {
+    font-size: 15px;
+  }
+  .main .container .crypto-mining-news .news .content-container .content-container-writer-detail {
+    font-family: "roboto-normal";
+    font-size: 15px;
+  }
+  .main .container .btc-price-list {
+    margin-top: 30px;
+    grid-area: btc;
+  }
+  .main .container .popular-posts {
+    grid-area: popular;
+    margin-top: 10px;
+  }
+  .main .container .news-letter {
+    grid-area: news;
+    margin-top: 70px;
+  }
+  .footer .container .footer-item {
+    font-size: 11px;
+  }
+  .footer .container .footer-item .logo-footer {
+    font-size: 25px;
+  }
+  .footer .container .footer-item .logo-footer-item {
+    font-size: 15px;
+  }
+  .footer .footer-container .footer-menu-text {
+    grid-column: 1/-1;
+  }
+  .footer .footer-container .footer-menu-text ul li a {
+    font-size: 12px;
+    font-weight: bolder;
+  }
+  .footer .footer-container .line-break {
+    display: block;
+  }
+  .footer .footer-container .footer-menu-icon {
+    grid-column: 1/-1;
+    text-align: center;
+  }
+  .footer .footer-container .footer-menu-icon a {
+    margin-right: 5px;
+  }
+  .footer .footer-container .footer-menu-icon a i {
+    font-size: 20px;
+  }
+}
+@media (max-width: 380px) {
+  .footer .footer-container .footer-menu-text {
+    grid-column: 1/-1;
+  }
+  .footer .footer-container .footer-menu-text ul li a {
+    font-size: 10px;
+    font-weight: bolder;
+  }
+}
+@media (max-width: 321px) {
+  .main .container {
+    grid-gap: 5px;
+  }
+  .main .container .crypto-mining-news .news .content-container .content-container-title {
+    font-size: 12px;
+  }
+  .main .container .crypto-mining-news .news .content-container .content-container-writer-detail {
+    font-family: "roboto-normal";
+    font-size: 10px;
+  }
+  .main .container .btc-price-list {
+    margin-top: 50px;
+  }
+  .main .container .popular-posts {
+    height: auto;
+    grid-area: popular;
+  }
+  .main .container .popular-posts .popular-posts-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "item1" "item2" "item3" "item4";
+  }
+  .main .container .popular-posts .popular-posts-content .item1 {
+    grid-area: item1;
+  }
+  .main .container .popular-posts .popular-posts-content .item2 {
+    grid-area: item2;
+  }
+  .main .container .popular-posts .popular-posts-content .item3 {
+    grid-area: item3;
+  }
+  .main .container .popular-posts .popular-posts-content .item4 {
+    grid-area: item4;
+  }
+  .main .container .news-letter {
+    margin-top: 70px;
+    height: 200px;
+  }
+  .main .container .btc-price-list {
+    margin-top: 10px;
+  }
+  .main .container .crypto-mining-news {
+    margin-top: 10px;
+  }
+  .footer .footer-container .footer-menu-text {
+    grid-column: 1/-1;
+  }
+  .footer .footer-container .footer-menu-text ul li a {
+    font-size: 8px;
+    font-weight: bolder;
+    text-justify: auto;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,77 @@
+//mobile smaller
+@media (max-width: 321px) {
+  //main
+  .main {
+    .container {
+      grid-gap: 5px;
+      .crypto-mining-news {
+        .news {
+          .content-container {
+            .content-container-title {
+              font-size: 12px;
+            }
+            .content-container-writer-detail {
+              font-family: $font-name-normal;
+              font-size: 10px;
+            }
+          }
+        }
+      }
+      .btc-price-list {
+        margin-top: 50px;
+      }
+      .popular-posts {
+        height: auto;
+        grid-area: popular;
+        .popular-posts-content {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-areas:
+            "item1"
+            "item2"
+            "item3"
+            "item4";
+          .item1 {
+            grid-area: item1;
+          }
+          .item2 {
+            grid-area: item2;
+          }
+          .item3 {
+            grid-area: item3;
+          }
+          .item4 {
+            grid-area: item4;
+          }
+        }
+      }
+      .news-letter {
+        margin-top: 70px;
+        height: 200px;
+      }
+      .btc-price-list{
+        margin-top: 10px;
+      }
+      .crypto-mining-news{
+        margin-top: 10px;
+      }
+    }
+  }
+  //footer
+  .footer {
+    .footer-container {
+      .footer-menu-text {
+        grid-column: 1/-1;
+        ul {
+          li {
+            a {
+              font-size: 8px;
+              font-weight: bolder;
+              text-justify: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
